@@ -2,7 +2,9 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <img src="../image/pets.jpg" width='100%' alt='image'/>
+    </div>
   )
 }
 

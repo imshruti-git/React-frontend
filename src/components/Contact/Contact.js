@@ -2,7 +2,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+       <img src="../image/corgi.jpg" width='50%' height='50%' alt='image'/>
+    </div>
   )
 }
 

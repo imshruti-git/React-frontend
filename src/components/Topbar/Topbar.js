@@ -1,32 +1,43 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import './topbar.css';
 
 const Topbar = () => {
   return (
     <div>
-        <Navbar expand="lg" bg="myColor" variant="dark">
+        <Navbar expand="md" bg="myColor" variant="dark" sticky='top' collapseOnSelect>
             <Container>
               <LinkContainer to="/">
-                  <Navbar.Brand>Navbar</Navbar.Brand>
+                  <Navbar.Brand className='logo'>Navbar</Navbar.Brand>
               </LinkContainer>
               
-              <Nav className="me-auto">
+              <Navbar.Toggle />
+              <Navbar.Collapse>
+              <Nav className='nav-menu'>
                 <LinkContainer to="/">
-                    <Nav.Link>Home</Nav.Link>
+                    <Nav.Link className='nav-item'>Home</Nav.Link>
                 </LinkContainer>
                
                 <LinkContainer to='/about'>
-                    <Nav.Link>About</Nav.Link>
+                    <Nav.Link className='nav-item'>About</Nav.Link>
                 </LinkContainer>
-                
+
+                  <NavDropdown title='Products'>
+                    <NavDropdown.Item>product1</NavDropdown.Item>
+                    <NavDropdown.Item>product2</NavDropdown.Item>
+                    <NavDropdown.Item>product3</NavDropdown.Item>
+                    <NavDropdown.Item>product4</NavDropdown.Item>
+                  </NavDropdown>
+
                 <LinkContainer to="/contact">
-                    <Nav.Link>Contact</Nav.Link>
+                    <Nav.Link className='nav-item'>Contact</Nav.Link>
                 </LinkContainer>
                 
                 
               </Nav>
+              </Navbar.Collapse>
+              
             </Container>
         </Navbar>
     </div>
