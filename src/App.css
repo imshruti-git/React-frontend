@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.container-fluid{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 25px;
+}
+
+.ant-layout{
+  background:white !important;
+}
+.layout .ant-layout-header{
+  background:white;
+  height: auto;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ant-layout-header{
+  
+  z-index: 999;
+  left: 0;
+  right: 0;
+}
+
+.span1{
+  color:blue;
+  font-size: 30px;
+}
+
+.span2{
+  color: green;
+  font-size: 30px;
+}
+.header .ant-menu{
+  border: 0;
+  float: right;
+
+}
+
+.header .ant-menu li.ant-menu-item{
+  position: relative;
+  font-size: 20px;
+}
+
+.mobileHidden{
+  display: block;
+}
+
+.mobileVisible{
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobileHidden {
+    display: none;
+  }
+
+  .mobileVisible{
+    display: block;
+  }
+}
+
+/*hero element*/
+
+.apphero{
+  display: flex;
+  padding: 0 200px;
+  margin-top: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .apphero {
+    padding: 0 10px;
+  }
+}
+
+.apphero h1{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.apphero.buttons{
+  margin: 2rem 0;
+}
+
+
+/*solution */
+.container{
+  margin: 5rem 5rem;
+  
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 1rem ;
+    text-align: center;
+  }
+}
+
+.secondhero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 0;
+  line-height: 4rem;
+  background-color:rgb(209, 219, 219);
+}
+@media (max-width: 900px) {
+  .secondhero h1{
+   font-size: 25px;
+  }
+}
+.ant-btn-primary{
+  margin-right: 1rem;
+}

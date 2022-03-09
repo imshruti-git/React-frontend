@@ -1,46 +1,61 @@
-import React from 'react'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
-import './topbar.css';
+import React, { useState } from 'react';
+import { Menu, Button,Drawer, } from 'antd';
+
+
+
 
 const Topbar = () => {
+
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
+
   return (
-    <div>
-        <Navbar expand="md" bg="myColor" variant="dark" sticky='top' collapseOnSelect>
-            <Container>
-              <LinkContainer to="/">
-                  <Navbar.Brand className='logo'>Navbar</Navbar.Brand>
-              </LinkContainer>
-              
-              <Navbar.Toggle />
-              <Navbar.Collapse>
-              <Nav className='nav-menu'>
-                <LinkContainer to="/">
-                    <Nav.Link className='nav-item'>Home</Nav.Link>
-                </LinkContainer>
-               
-                <LinkContainer to='/about'>
-                    <Nav.Link className='nav-item'>About</Nav.Link>
-                </LinkContainer>
+     <div className='container-fluid'>
+       <div className='header'>
+          <div className="logo"><span className='span1'>Any</span><span className='span2'>Done</span></div>
 
-                  <NavDropdown title='Products'>
-                    <NavDropdown.Item>product1</NavDropdown.Item>
-                    <NavDropdown.Item>product2</NavDropdown.Item>
-                    <NavDropdown.Item>product3</NavDropdown.Item>
-                    <NavDropdown.Item>product4</NavDropdown.Item>
-                  </NavDropdown>
+          <div className='mobileHidden'>
+            <Menu className="menu" mode="horizontal" defaultSelectedKeys={['2']}>
+              <Menu.Item key="1">Home</Menu.Item>
+              <Menu.Item key="2">About Us</Menu.Item>
+              <Menu.Item key="3">Features</Menu.Item>
+              <Menu.Item key="4">Solutions</Menu.Item>
+              <Menu.Item key="5">Pricing</Menu.Item>
+              <Menu.Item key="6">Sign In</Menu.Item>
+              <Menu.Item key="7"> <Button type="primary">Primary Button</Button></Menu.Item>
+            </Menu>
+          </div>
+          <div className='mobileVisible'>
+              <Button type="primary" onClick={showDrawer}>
+                 MENU
+              </Button>
+                <Drawer placement="right" onClose={onClose} visible={visible}>
+                <Menu className="menu" mode="vertical" defaultSelectedKeys={['2']}>
+                  <Menu.Item key="1">Home</Menu.Item>
+                  <Menu.Item key="2">About Us</Menu.Item>
+                  <Menu.Item key="3">Features</Menu.Item>
+                  <Menu.Item key="4">Solutions</Menu.Item>
+                  <Menu.Item key="5">Pricing</Menu.Item>
+                  <Menu.Item key="6">Sign In</Menu.Item>
+                  <Menu.Item key="7"> <Button type="primary">Primary Button</Button></Menu.Item>
+            </Menu>
+                </Drawer>  
+          </div>
+          
+       </div>
 
-                <LinkContainer to="/contact">
-                    <Nav.Link className='nav-item'>Contact</Nav.Link>
-                </LinkContainer>
-                
-                
-              </Nav>
-              </Navbar.Collapse>
-              
-            </Container>
-        </Navbar>
-    </div>
+      </div>
+      
+    
+   
+  
+  
   )
 }
 

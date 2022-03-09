@@ -1,10 +1,24 @@
 import React from 'react'
+import Hero from '../Hero/Hero';
+import HeroSecond from '../Hero/Hero2';
+import Solutions from '../Solutions/Solutions';
+import Time from '../Time/Time';
+import Work from '../Work/Work';
+
 
 const Home = () => {
   return (
-    <div>
-      <img src="../image/pets.jpg" width='100%' alt='image'/>
-    </div>
+        <>
+            <Hero />
+            
+               <Solutions />
+               <Work />
+               <Time />
+                <HeroSecond />
+           
+        </>
+     
+ 
   )
 }
 
