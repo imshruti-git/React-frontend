@@ -4,8 +4,9 @@ import Topbar from './components/Topbar/Topbar';
 import 'antd/dist/antd.css'
 import { Layout } from 'antd';
 import Home from './components/Home/Home';
+import AppFooter from './components/AppFooter';
 
-const { Header, Content } = Layout;
+const { Header, Content, Footer } = Layout;
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
             <Content>
               <Home />
             </Content>
+            <Footer>
+              <AppFooter />
+            </Footer>
           </Layout>
       
     
