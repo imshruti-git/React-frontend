@@ -1,24 +1,23 @@
-*{
+.App{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 
 .container-fluid{
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 25px;
+  padding: 0 15px;
+ 
 }
 
 @media (max-width: 900px) {
   .container-fluid {
-    margin: 0 ;  
-    padding: 0 10px;
+   width: 90vw;
+   padding: 0;
   }
 }
-
 
 .container{
   margin: 5rem 5rem;
@@ -26,9 +25,24 @@
 
 @media (max-width: 900px) {
   .container {
-    margin: 1rem ;
+    margin: 0 ;
+    padding: 0 10px;
     text-align: center;
   }
+}
+
+
+/*Custome mede Button*/
+.btn{
+  font-weight: bold;
+  cursor: pointer;
+  padding:10px 15px;
+  font-size: 20px;
+
+}
+.btn:hover{
+  box-shadow: 10px 10px rgb(119, 117, 117);
+  
 }
 
 /*layout*/
@@ -36,25 +50,35 @@
   background:white !important;
 }
 
-.layout .ant-layout-header{
-  background:white;
+.mainlayout .ant-layout-header{
+  background-color:white;
   height: auto;
+  box-shadow: grey;
+  padding: 0;
+}
+
+.mainlayout .ant-layout-header-changecolor{
+  background:rgb(192, 189, 189);
+  height: auto;
+  padding: 0;
 }
 
 
 /*header*/
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .ant-layout-header{
   position: fixed;
   z-index: 999;
   left: 0;
   right: 0;
 }
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
 
 /*logo title*/
       .span1{
@@ -71,12 +95,14 @@
 
 .header .ant-menu{
   border: 0;
+  background: none !important;
 }
 
 .header .ant-menu li.ant-menu-item{
-  position: relative;
   font-size: 20px;
+  position: relative;
 }
+
 
 /*responsive menubar*/
 .mobileHidden{
@@ -87,13 +113,14 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+
+@media only screen and (max-width: 900px) {
+  .mobileVisible {
+    display: block;
+  }
+  
   .mobileHidden {
     display: none;
-  }
-
-  .mobileVisible{
-    display: block;
   }
 }
 
@@ -113,7 +140,7 @@
 
 @media (max-width: 900px) {
   .apphero {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
@@ -122,6 +149,9 @@
   font-size: 40px;
 }
 
+.hero-button{
+  padding: 3rem;
+}
 /*Second hero element*/
 .secondhero{
   display: flex;
@@ -131,12 +161,13 @@
   text-align: center;
   padding: 3rem 0;
   line-height: 4rem;
-  background-color:rgb(209, 219, 219);
+  background-color:rgb(243, 239, 252);
 }
 
 @media (max-width: 900px) {
   .secondhero h1{
    font-size: 25px;
+   padding:0 20px;
   }
 }
 
@@ -160,3 +191,16 @@
 .section-bold-word{
   color: rgb(96, 96, 245);
 }
+
+
+/*footer styling*/
+.ant-layout-footer {
+  background: #fff !important;
+}
+/*responsive images*/
+.responsive-image{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+

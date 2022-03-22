@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 import { Menu, Button, Drawer } from 'antd';
-
+import MenuIcon from '@material-ui/icons/Menu';
 
 const Topbar = () => {
 
   const [visible, setVisible] = useState(false);
+
   const showDrawer = () => {
     setVisible(true);
   };
+
   const onClose = () => {
     setVisible(false);
   };
 
+  
+
+  
 
   return (
      <div className='container-fluid'>
        <div className='header'>
-
           <div className="logo">
             <span className='span1'>Any</span><span className='span2'>Done</span>
           </div>
@@ -35,10 +39,10 @@ const Topbar = () => {
             </Menu>
           </div>
 
-          <div className='mobileVisible'>
-              <Button type="primary" onClick={showDrawer}>
-                 MENU
-              </Button>
+          <div className='mobileVisible'>     
+            
+             <MenuIcon onClick={showDrawer}/>
+              
                 <Drawer placement="right" onClose={onClose} visible={visible}>
                   <Menu className="menu" mode="vertical" defaultSelectedKeys={['2']}>
                     <Menu.Item key="1">Home</Menu.Item>
@@ -53,7 +57,6 @@ const Topbar = () => {
                   </Menu>
                 </Drawer>  
           </div>
-          
        </div>
       </div>  
   )

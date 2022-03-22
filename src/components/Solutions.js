@@ -1,20 +1,32 @@
 import React from 'react'
 import { Row, Col, Button } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
+import AppButton from './AppButton';
 
 const Solutions = () => {
   return (
     
     <div className='container'>
         <Row>
-            <Col xl={14} xs={24} offset={1}>
+            <Col xl={15} xs={24}>
             <h1 className='section-title'>Proactive solutions</h1>
             <h1 className='section-para'>Wouldn't it be <span className='section-bold-word'>AWESOME</span> if your problems were solved before you even realize they existed.</h1>
             <p style={{fontSize: '25px'}}>Interactively address known customer support issues, resolve, and update flutter even before your customers reach you.</p>
-            <Button type='primary' ghost size='large' icon={<ArrowRightOutlined />}>Learn more</Button>
+
+            <AppButton
+                        type='button'                        
+                        borderRadius='10px'
+                        border=' 2px solid #4628ff '
+                        textColor='#4628ff'
+                        buttonBackground='transparent'
+                        margin='2rem 0'
+                    >
+                        Learn More <ArrowRightOutlined />
+            </AppButton>
             </Col>
+            
             <Col  xl={9} xs={24}  >
-                <img src='../../../image/pic.png' />
+                <img src='../../../image/pic.png' alt='' class='responsive-image'/>
             </Col>
         </Row>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Space, Anchor } from 'antd';
+import { Row, Col, Anchor } from 'antd';
 import { FacebookFilled, InstagramFilled, TwitterCircleFilled, LinkedinFilled } from '@ant-design/icons';
 
 const { Link } = Anchor;
@@ -7,12 +7,11 @@ const { Link } = Anchor;
 
 const AppFooter = () => {
   
-
   return (
     <div className='container-fluid'>
       <Row>
           <Col xl={5} xs={24}>
-          <span className='span1'>Any</span><span className='span2'>Done</span>
+          <span className='span1'>any</span><span className='span2'>done</span>
           <br/>
           <p>Ready to serve customers. Anywhere, Anytime!</p>
           </Col>
@@ -78,6 +77,7 @@ const AppFooter = () => {
           </Col>
       </Row>
     </div>
+    
   )
 }
 
