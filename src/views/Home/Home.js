@@ -13,12 +13,8 @@ const Home = () => {
           <Solutions />
           <Work />
           <Time />
-          <HeroSecond />
-        
-          
+          <HeroSecond />     
       </>
-     
- 
   )
 }
 

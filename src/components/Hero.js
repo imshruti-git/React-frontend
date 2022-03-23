@@ -18,6 +18,7 @@ const Hero = () => {
                         buttonBackground=' #4628ff'
                         borderRadius='10px'
                         border='none'
+                        margin='0 0 5rem 0'
                     >
                         Try Now
                     </AppButton>
@@ -29,6 +30,7 @@ const Hero = () => {
                         border=' 2px solid #4628ff '
                         textColor='#4628ff'
                         buttonBackground='transparent'
+                        margin='0 0 5rem 0'
                     >
                         Watch Video
                     </AppButton>

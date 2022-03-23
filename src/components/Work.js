@@ -6,11 +6,11 @@ import AppButton from './AppButton';
 const Work = () => {
   return (
     <div className='container'>
-        <Row>
-        <Col  xl={{span:9, order:1}} xs={{span: 24, order:2}}>
+        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+        <Col  className="gutter-row" xl={{span:9, order:1}} xs={{span: 24, order:2}}>
         <img src='../../../image/work.png' alt='' class='responsive-image'/>
             </Col>
-            <Col xl={{span:14, order:2}} xs={{span:24, order:1}} offset={1}>
+            <Col className="gutter-row" xl={{span:15, order:2}} xs={{span:24, order:1}}>
                 
                 <h1 className='section-title'>Simplify Work</h1>
             <h1 className='section-para'>Satisfying every customer can be challenging. But, with <span className='section-bold-word'>Anyone Desk</span>, we help you break that ice.</h1>
